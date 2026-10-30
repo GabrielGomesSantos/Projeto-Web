@@ -6,73 +6,156 @@
 </head>
 <body>
 
-    <!-- 1. Identificação da Loja (Topo / Cabeçalho) -->
-    <div id="topo">
+    <!-- 1. Topo / Cabeçalho Semântico -->
+    <header id="topo">
         <h1>F1 Paddock Store — O seu Marketplace de Fórmula 1</h1>
         <p>Acelere sua paixão pelo automobilismo com a maior coleção de colecionáveis, simuladores e equipamentos oficiais do grid mundial.</p>
         <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=720&auto=format&fit=crop&q=80" alt="Banner oficial F1 Paddock Store com monoposto acelerando na pista" width="600">
         <p>Oferta Especial de Temporada: <strong>Frete grátis para todo o Brasil em compras acima de R$ 350</strong>!</p>
+
+        <!-- Menu de Navegação em Lista Não Ordenada -->
+        <nav aria-label="Menu Principal de Navegação">
+            <ul>
+                <li><a href="#vitrine">Produtos em Destaque</a></li>
+                <li><a href="#especificacoes">Especificações Técnicas</a></li>
+                <li><a href="#comparativo">Tabela Comparativa</a></li>
+                <li><a href="#carrinho">Meu Carrinho</a></li>
+                <li><a href="#rodape">Políticas e Atendimento</a></li>
+            </ul>
+        </nav>
         <hr>
-    </div>
+    </header>
 
-    <!-- 2. Vitrine de Produtos (Catálogo Inicial) -->
-    <div>
-        <h2>Produtos em Destaque</h2>
+    <!-- Barra Lateral com Categorias e Ranking -->
+    <aside aria-label="Categorias e Mais Vendidos">
+        <h2>Categorias do Paddock</h2>
+        <ul>
+            <li>Simuladores e Volantes Profissionais</li>
+            <li>Miniaturas Diecast de Colecionador (1:18 e 1:43)</li>
+            <li>Capacetes de Pilotos & Réplicas Oficiais</li>
+            <li>Vestuário e Bonés de Equipes</li>
+            <li>Memorabilia & Peças Históricas de Corrida</li>
+        </ul>
 
-        <!-- Produto 1 -->
-        <div>
-            <h3>Volante Simulador Réplica F1 Pro Grip</h3>
-            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=360&auto=format&fit=crop&q=80" alt="Volante simulador réplica de Fórmula 1 com empunhaduras ergonômicas" width="300">
-            <p>Volante réplica profissional com display de telemetria integrado, pás magnéticas em fibra de carbono e motor <i>Direct Drive</i> com resposta ultrarrápida de <i>Force Feedback</i>.</p>
-            <p>Preço: <span>R$ 4.899,90</span> <b>À vista no PIX com 10% de desconto</b></p>
-            <a href="#carrinho">Simular Adicionar ao Carrinho</a>
-        </div>
-
-        <br>
-
-        <!-- Produto 2 -->
-        <div>
-            <h3>Miniatura F1 Red Bull Racing RB20 1:18</h3>
-            <img src="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?w=360&auto=format&fit=crop&q=80" alt="Miniatura colecionável escala 1:18 do carro Red Bull Racing RB20" width="300">
-            <p>Miniatura oficial com acabamento em liga metálica <i>diecast</i>, pintura premium em <i>matte finish</i>, pneus slick em borracha e detalhes aerodinâmicos do <i>ground effect</i>.</p>
-            <p>Preço: <span>R$ 799,00</span> <b>Em até 10x sem juros no cartão</b></p>
-            <a href="#carrinho">Simular Adicionar ao Carrinho</a>
-        </div>
-
+        <h3>Top 3 Mais Vendidos da Temporada</h3>
+        <ol>
+            <li>Volante Simulador Réplica F1 Pro Grip</li>
+            <li>Miniatura F1 Red Bull Racing RB20 1:18</li>
+            <li>Boné Oficial Scuderia Ferrari Team</li>
+        </ol>
         <hr>
-    </div>
+    </aside>
 
-    <!-- 3. Detalhamento Técnico do Produto Principal -->
-    <div>
-        <h4>Especificações Técnicas do Produto em Destaque</h4>
-        <p>O Volante Simulador Réplica F1 Pro Grip foi projetado sob os mais rigorosos padrões da engenharia do automobilismo virtual. Cada unidade passa por calibração milimétrica nos sensores de rotação óptica. <em>Garantia oficial de 2 anos direto com o fabricante e suporte técnico vitalício especializado</em>.</p>
-        <p>
-            Itens inclusos na embalagem e especificações operacionais:<br>
-            • 1x Volante Réplica F1 com sistema <i>Quick Release</i> em alumínio aeroespacial<br>
-            • 1x Cabo USB blindado tipo C trançado de alta velocidade (3 metros)<br>
-            • 1x Conjunto de borboletas magnéticas adicionais intercambiáveis<br>
-            • Compatibilidade: PC, PlayStation 5 e Xbox Series X/S<br>
-            • Requisitos de sistema: Porta USB 3.0 disponível e Windows 10/11 (64-bit)
-        </p>
-        <hr>
-    </div>
+    <!-- Conteúdo Principal -->
+    <main>
 
-    <!-- 4. Resumo do Carrinho de Compras -->
-    <div id="carrinho">
-        <h5>Meu Carrinho de Compras</h5>
-        <p>
-            1x Volante Simulador Réplica F1 Pro Grip — R$ 4.899,90<br>
-            1x Miniatura F1 Red Bull Racing RB20 1:18 — R$ 799,00<br>
-            Frete: R$ 0,00 (Campanha Frete Grátis Nacional)<br>
-            Valor Total Estimado: <strong>R$ 5.698,90</strong>
-        </p>
-        <a href="#topo">Continuar Comprando</a> | 
-        <a href="https://pagamento.f1paddockstore.com.br/checkout">Finalizar Compra</a>
-        <hr>
-    </div>
+        <!-- 2. Vitrine de Produtos (Catálogo Inicial) -->
+        <section id="vitrine">
+            <h2>Produtos em Destaque</h2>
 
-    <!-- 5. Informações da Loja e Atendimento (Rodapé) -->
-    <div>
+            <!-- Produto 1: Artigo com Vídeo Demonstrativo -->
+            <article>
+                <h3>Volante Simulador Réplica F1 Pro Grip</h3>
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=360&auto=format&fit=crop&q=80" alt="Volante simulador réplica de Fórmula 1 com empunhaduras ergonômicas" width="300">
+                <p>Volante réplica profissional com display de telemetria integrado, pás magnéticas em fibra de carbono e motor <i>Direct Drive</i> com resposta ultrarrápida de <i>Force Feedback</i>.</p>
+                <p>Preço: <span>R$ 4.899,90</span> <b>À vista no PIX com 10% de desconto</b></p>
+
+                <!-- Vídeo Demonstrativo do Produto -->
+                <h4>Vídeo Demonstrativo do Produto em Ação</h4>
+                <video controls width="480">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
+                    <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.webm" type="video/webm">
+                    Seu navegador não suporta a tag de vídeo em HTML5. Você pode baixar o vídeo demonstrativo nos formatos MP4 ou WebM para visualização local.
+                </video>
+
+                <p><a href="#carrinho">Simular Adicionar ao Carrinho</a></p>
+            </article>
+
+            <br>
+
+            <!-- Produto 2: Miniatura Colecionável -->
+            <article>
+                <h3>Miniatura F1 Red Bull Racing RB20 1:18</h3>
+                <img src="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?w=360&auto=format&fit=crop&q=80" alt="Miniatura colecionável escala 1:18 do carro Red Bull Racing RB20" width="300">
+                <p>Miniatura oficial com acabamento em liga metálica <i>diecast</i>, pintura premium em <i>matte finish</i>, pneus slick em borracha e detalhes aerodinâmicos do <i>ground effect</i>.</p>
+                <p>Preço: <span>R$ 799,00</span> <b>Em até 10x sem juros no cartão</b></p>
+                <p><a href="#carrinho">Simular Adicionar ao Carrinho</a></p>
+            </article>
+
+            <hr>
+        </section>
+
+        <!-- 3. Detalhamento Técnico do Produto Principal -->
+        <section id="especificacoes">
+            <h4>Especificações Técnicas do Produto em Destaque</h4>
+            <p>O Volante Simulador Réplica F1 Pro Grip foi projetado sob os mais rigorosos padrões da engenharia do automobilismo virtual. Cada unidade passa por calibração milimétrica nos sensores de rotação óptica. <em>Garantia oficial de 2 anos direto com o fabricante e suporte técnico vitalício especializado</em>.</p>
+            <p>
+                Itens inclusos na embalagem e especificações operacionais:<br>
+                • 1x Volante Réplica F1 com sistema <i>Quick Release</i> em alumínio aeroespacial<br>
+                • 1x Cabo USB blindado tipo C trançado de alta velocidade (3 metros)<br>
+                • 1x Conjunto de borboletas magnéticas adicionais intercambiáveis<br>
+                • Compatibilidade: PC, PlayStation 5 e Xbox Series X/S<br>
+                • Requisitos de sistema: Porta USB 3.0 disponível e Windows 10/11 (64-bit)
+            </p>
+            <hr>
+        </section>
+
+        <!-- 4. Tabela de Especificações Técnicas Comparativas -->
+        <section id="comparativo">
+            <h4>Tabela Comparativa de Especificações Técnicas</h4>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Modelo</th>
+                        <th>Conectividade</th>
+                        <th>Peso</th>
+                        <th>Garantia</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Volante Simulador Réplica F1 Pro Grip</td>
+                        <td>USB 3.0 Tipo-C / Quick Release Sem Fio</td>
+                        <td>2.100 g</td>
+                        <td>24 meses oficial</td>
+                    </tr>
+                    <tr>
+                        <td>Miniatura F1 Red Bull Racing RB20 1:18</td>
+                        <td>Estático (Modelo Colecionável Decorativo)</td>
+                        <td>850 g</td>
+                        <td>12 meses contra defeitos</td>
+                    </tr>
+                    <tr>
+                        <td>Pedaleira Hidráulica F1 Pro V3</td>
+                        <td>Cabo RJ12 / USB Plug and Play</td>
+                        <td>4.300 g</td>
+                        <td>24 meses oficial</td>
+                    </tr>
+                </tbody>
+            </table>
+            <hr>
+        </section>
+
+        <!-- 5. Resumo do Carrinho de Compras -->
+        <section id="carrinho">
+            <h5>Meu Carrinho de Compras</h5>
+            <p>
+                1x Volante Simulador Réplica F1 Pro Grip — R$ 4.899,90<br>
+                1x Miniatura F1 Red Bull Racing RB20 1:18 — R$ 799,00<br>
+                Frete: R$ 0,00 (Campanha Frete Grátis Nacional)<br>
+                Valor Total Estimado: <strong>R$ 5.698,90</strong>
+            </p>
+            <p>
+                <a href="#topo">Continuar Comprando</a> | 
+                <a href="https://pagamento.f1paddockstore.com.br/checkout">Finalizar Compra</a>
+            </p>
+            <hr>
+        </section>
+
+    </main>
+
+    <!-- 6. Informações da Loja e Atendimento (Rodapé) -->
+    <footer id="rodape">
         <h6>Políticas, Atendimento e Avisos Legais</h6>
         <p>
             Canais de atendimento e mídias sociais:<br>
@@ -86,7 +169,7 @@
             Av. Senador Teotônio Vilela, 261 - Interlagos, São Paulo - SP, CEP: 04801-010<br>
             © 2026 F1 Paddock Store. Todos os direitos reservados.
         </p>
-    </div>
+    </footer>
 
 </body>
 </html>
