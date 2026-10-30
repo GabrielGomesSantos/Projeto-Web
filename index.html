@@ -2,39 +2,48 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <title>F1 Paddock Store - O seu Marketplace de Fórmula 1</title>
+    <title>F1 Paddock Store - O seu Marketplace Oficial de Fórmula 1</title>
     <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
 
     <!-- 1. Topo / Cabeçalho Semântico -->
     <header id="topo">
+        <div class="logo-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/F1.svg" alt="Logotipo Oficial da Fórmula 1" class="logo-f1" width="130">
+            <span class="badge-oficial">PADDOCK STORE OFICIAL</span>
+        </div>
+
         <h1>F1 Paddock Store — O seu Marketplace de Fórmula 1</h1>
-        <p>Acelere sua paixão pelo automobilismo com a maior coleção de colecionáveis, simuladores e equipamentos oficiais do grid mundial.</p>
-        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=720&auto=format&fit=crop&q=80" alt="Banner oficial F1 Paddock Store com monoposto acelerando na pista" width="600">
-        <p>Oferta Especial de Temporada: <strong>Frete grátis para todo o Brasil em compras acima de R$ 350</strong>!</p>
+        <p>Acelere sua paixão pelo automobilismo com a maior coleção de colecionáveis, simuladores, vestuário de escuderias e equipamentos homologados do grid mundial.</p>
+        
+        <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=1100&auto=format&fit=crop&q=80" alt="Carros de Fórmula 1 acelerando na reta principal do autódromo" class="banner-principal" width="900">
+        
+        <p class="aviso-destaque">Oferta Especial de Temporada: <strong>Frete grátis para todo o Brasil em compras acima de R$ 350</strong>!</p>
 
         <!-- Formulário de Busca Interna (Método GET) -->
-        <form action="index.html" method="get">
+        <form action="index.html" method="get" class="form-busca">
             <label for="busca">Buscar no Paddock:</label>
-            <input type="search" name="q" id="busca" placeholder="Digite o produto...">
+            <input type="search" name="q" id="busca" placeholder="Ex.: Volante Pro, Miniatura RB20, Boné Ferrari...">
 
             <label for="categoria">Categoria:</label>
             <select name="categoria" id="categoria">
-                <option value="">Todos</option>
-                <option value="hardware">Hardware e Simuladores</option>
-                <option value="perifericos">Periféricos e Acessórios</option>
+                <option value="">Todas as Categorias</option>
+                <option value="simuladores">Simuladores e Hardware</option>
                 <option value="miniaturas">Miniaturas Colecionáveis</option>
                 <option value="vestuario">Vestuário de Equipes</option>
+                <option value="perifericos">Periféricos e Acessórios</option>
             </select>
 
-            <button type="submit">Buscar</button>
+            <button type="submit">Buscar no Grid</button>
         </form>
 
         <!-- Menu de Navegação em Lista Não Ordenada -->
         <nav aria-label="Menu Principal de Navegação">
             <ul>
                 <li><a href="#vitrine">Produtos em Destaque</a></li>
+                <li><a href="#equipes">Equipes do Grid</a></li>
+                <li><a href="#metricas">Métricas dos Pilotos</a></li>
                 <li><a href="#especificacoes">Especificações Técnicas</a></li>
                 <li><a href="#comparativo">Tabela Comparativa</a></li>
                 <li><a href="#carrinho">Meu Carrinho</a></li>
@@ -49,18 +58,18 @@
     <aside aria-label="Categorias e Mais Vendidos">
         <h2>Categorias do Paddock</h2>
         <ul>
-            <li>Simuladores e Volantes Profissionais</li>
-            <li>Miniaturas Diecast de Colecionador (1:18 e 1:43)</li>
-            <li>Capacetes de Pilotos & Réplicas Oficiais</li>
-            <li>Vestuário e Bonés de Equipes</li>
-            <li>Memorabilia & Peças Históricas de Corrida</li>
+            <li>Simuladores e Volantes Profissionais <i>Direct Drive</i></li>
+            <li>Miniaturas <i>Diecast</i> de Colecionador (Escalas 1:18 e 1:43)</li>
+            <li>Capacetes de Pilotos & Réplicas Oficiais de Corrida</li>
+            <li>Vestuário, Jaquetas e Bonés das Escuderias</li>
+            <li>Memorabilia, Rodas Originais e Peças Históricas</li>
         </ul>
 
         <h3>Top 3 Mais Vendidos da Temporada</h3>
         <ol>
-            <li>Volante Simulador Réplica F1 Pro Grip</li>
-            <li>Miniatura F1 Red Bull Racing RB20 1:18</li>
-            <li>Boné Oficial Scuderia Ferrari Team</li>
+            <li>Volante Simulador Réplica F1 Pro Grip com Display LCD</li>
+            <li>Miniatura F1 Red Bull Racing RB20 Max Verstappen 1:18</li>
+            <li>Boné Oficial Scuderia Ferrari Team Charles Leclerc</li>
         </ol>
         <hr>
     </aside>
@@ -73,34 +82,130 @@
             <h2>Produtos em Destaque</h2>
 
             <!-- Produto 1: Artigo com Vídeo Demonstrativo -->
-            <article>
+            <article class="card-produto">
+                <span class="badge-tag">Simulador Profissional</span>
                 <h3>Volante Simulador Réplica F1 Pro Grip</h3>
-                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=360&auto=format&fit=crop&q=80" alt="Volante simulador réplica de Fórmula 1 com empunhaduras ergonômicas" width="300">
-                <p>Volante réplica profissional com display de telemetria integrado, pás magnéticas em fibra de carbono e motor <i>Direct Drive</i> com resposta ultrarrápida de <i>Force Feedback</i>.</p>
-                <p>Preço: <span>R$ 4.899,90</span> <b>À vista no PIX com 10% de desconto</b></p>
+                <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600&auto=format&fit=crop&q=80" alt="Volante simulador réplica de Fórmula 1 com empunhaduras ergonômicas e borboletas magnéticas" width="450">
+                <p>Volante réplica profissional em fibra de carbono legítima com display de telemetria colorida integrado, borboletas de câmbio magnéticas e tecnologia <i>Direct Drive</i> com motor industrial de 20 Nm de torque para resposta imediata de <i>Force Feedback</i>.</p>
+                <p class="preco-container">Preço: <span>R$ 4.899,90</span> <b>À vista no PIX com 10% de desconto</b></p>
 
                 <!-- Vídeo Demonstrativo do Produto -->
                 <h4>Vídeo Demonstrativo do Produto em Ação</h4>
-                <video controls width="480">
+                <video controls width="560">
                     <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4" type="video/mp4">
                     <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.webm" type="video/webm">
                     Seu navegador não suporta a tag de vídeo em HTML5. Você pode baixar o vídeo demonstrativo nos formatos MP4 ou WebM para visualização local.
                 </video>
 
-                <p><a href="#checkout">Simular Adicionar ao Carrinho</a></p>
+                <p><a href="#checkout" class="btn-adicionar">Simular Adicionar ao Carrinho</a></p>
             </article>
 
             <br>
 
             <!-- Produto 2: Miniatura Colecionável -->
-            <article>
+            <article class="card-produto">
+                <span class="badge-tag redbull-tag">Colecionador Exclusivo</span>
                 <h3>Miniatura F1 Red Bull Racing RB20 1:18</h3>
-                <img src="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?w=360&auto=format&fit=crop&q=80" alt="Miniatura colecionável escala 1:18 do carro Red Bull Racing RB20" width="300">
-                <p>Miniatura oficial com acabamento em liga metálica <i>diecast</i>, pintura premium em <i>matte finish</i>, pneus slick em borracha e detalhes aerodinâmicos do <i>ground effect</i>.</p>
-                <p>Preço: <span>R$ 799,00</span> <b>Em até 10x sem juros no cartão</b></p>
-                <p><a href="#checkout">Simular Adicionar ao Carrinho</a></p>
+                <img src="https://images.unsplash.com/photo-1594787318286-3d835c1d207f?w=600&auto=format&fit=crop&q=80" alt="Miniatura colecionável escala 1:18 do carro Red Bull Racing RB20" width="450">
+                <p>Miniatura oficial licenciada com acabamento em liga metálica <i>diecast</i> de altíssima fidelidade, pintura premium em <i>matte finish</i>, pneus slick de borracha sintética e difusor traseiro aerodinâmico reproduzindo o efeito solo (<i>ground effect</i>) do modelo campeão.</p>
+                <p class="preco-container">Preço: <span>R$ 799,00</span> <b>Em até 10x sem juros no cartão</b></p>
+                <p><a href="#checkout" class="btn-adicionar">Simular Adicionar ao Carrinho</a></p>
             </article>
 
+            <hr>
+        </section>
+
+        <!-- Nova Seção: Equipes Oficiais do Grid de Construtores -->
+        <section id="equipes">
+            <h2>Escuderias Oficiais do Grid Mundial</h2>
+            <p>Conheça os gigantes da engenharia e da velocidade que disputam a ponta do campeonato mundial de Fórmula 1.</p>
+
+            <div class="grid-equipes">
+                <!-- Equipe Ferrari -->
+                <article class="card-equipe equipe-ferrari">
+                    <img src="https://images.unsplash.com/photo-1534093607318-f025413f49cb?w=500&auto=format&fit=crop&q=80" alt="Monoposto da Scuderia Ferrari acelerando no circuito" width="350">
+                    <h3>Scuderia Ferrari HP</h3>
+                    <p><strong>Sede:</strong> Maranello, Itália</p>
+                    <p><strong>Unidade de Potência:</strong> Ferrari 066/12 V6 Turbo Híbrido</p>
+                    <p><strong>Pilotos Titulares:</strong> Charles Leclerc (#16) e Lewis Hamilton (#44)</p>
+                    <p>A mais tradicional equipe do automobilismo com 16 títulos de construtores e uma legião global de <i>tifosi</i>.</p>
+                </article>
+
+                <!-- Equipe Red Bull -->
+                <article class="card-equipe equipe-redbull">
+                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=500&auto=format&fit=crop&q=80" alt="Garagem e carro da Red Bull Racing" width="350">
+                    <h3>Oracle Red Bull Racing</h3>
+                    <p><strong>Sede:</strong> Milton Keynes, Reino Unido</p>
+                    <p><strong>Unidade de Potência:</strong> Honda RBPT V6 Turbo</p>
+                    <p><strong>Pilotos Titulares:</strong> Max Verstappen (#1) e Sergio Pérez (#11)</p>
+                    <p>Referência máxima em aerodinâmica e paradas de box ultrarrápidas abaixo dos 2 segundos.</p>
+                </article>
+
+                <!-- Equipe McLaren -->
+                <article class="card-equipe equipe-mclaren">
+                    <img src="https://images.unsplash.com/photo-1511919884226-fd3cad34687c?w=500&auto=format&fit=crop&q=80" alt="Carro McLaren Papaya em preparação" width="350">
+                    <h3>McLaren Formula 1 Team</h3>
+                    <p><strong>Sede:</strong> Woking, Reino Unido</p>
+                    <p><strong>Unidade de Potência:</strong> Mercedes-AMG M15 Performance</p>
+                    <p><strong>Pilotos Titulares:</strong> Lando Norris (#4) e Oscar Piastri (#81)</p>
+                    <p>A lendária equipe com pintura <i>Papaya Orange</i> renascida como força dominante nas vitórias de GPs.</p>
+                </article>
+
+                <!-- Equipe Mercedes -->
+                <article class="card-equipe equipe-mercedes">
+                    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=500&auto=format&fit=crop&q=80" alt="Carro Mercedes Flecha de Prata" width="350">
+                    <h3>Mercedes-AMG PETRONAS</h3>
+                    <p><strong>Sede:</strong> Brackley, Reino Unido</p>
+                    <p><strong>Unidade de Potência:</strong> Mercedes-AMG F1 M15 E Performance</p>
+                    <p><strong>Pilotos Titulares:</strong> George Russell (#63) e Kimi Antonelli (#12)</p>
+                    <p>As clássicas Flechas de Prata com histórico dominante e inovação em engenharia alemã.</p>
+                </article>
+            </div>
+            <hr>
+        </section>
+
+        <!-- Nova Seção: Métricas e Telemetria dos Atletas -->
+        <section id="metricas">
+            <h2>Métricas e Telemetria dos Pilotos</h2>
+            <p>Os atletas da Fórmula 1 suportam desacelerações extremas, temperaturas elevadas no cockpit e batimentos cardíacos médios de 170 bpm durante duas horas ininterruptas.</p>
+
+            <div class="grid-metricas">
+                <article class="card-piloto">
+                    <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=400&auto=format&fit=crop&q=80" alt="Piloto profissional de Fórmula 1 com capacete e macacão" width="280">
+                    <h3>Max Verstappen</h3>
+                    <p class="subtitulo-piloto">Oracle Red Bull Racing • #1</p>
+                    <ul class="stats-piloto">
+                        <li><strong>Vitórias no GP:</strong> 61 vitórias</li>
+                        <li><strong>Pole Positions:</strong> 40 poles</li>
+                        <li><strong>Velocidade Máx. Registrada:</strong> 351,2 km/h (Monza)</li>
+                        <li><strong>Pico de Força G Lateral:</strong> 5,4G (Curva Copse / Silverstone)</li>
+                    </ul>
+                </article>
+
+                <article class="card-piloto">
+                    <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?w=400&auto=format&fit=crop&q=80" alt="Piloto focado antes de entrar no cockpit do monoposto" width="280">
+                    <h3>Lewis Hamilton</h3>
+                    <p class="subtitulo-piloto">Scuderia Ferrari HP • #44</p>
+                    <ul class="stats-piloto">
+                        <li><strong>Títulos Mundiais:</strong> 7 vezes campeão mundial</li>
+                        <li><strong>Vitórias Históricas:</strong> 105 vitórias</li>
+                        <li><strong>Pole Positions:</strong> 104 poles (Recorde absoluto)</li>
+                        <li><strong>Pico de Força G de Frenagem:</strong> 5,3G (Curva 1 / Monza)</li>
+                    </ul>
+                </article>
+
+                <article class="card-piloto">
+                    <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?w=400&auto=format&fit=crop&q=80" alt="Capacete de piloto de corrida com visor reflexivo" width="280">
+                    <h3>Lando Norris</h3>
+                    <p class="subtitulo-piloto">McLaren F1 Team • #4</p>
+                    <ul class="stats-piloto">
+                        <li><strong>Vitórias em GPs:</strong> 4 vitórias</li>
+                        <li><strong>Pódios Conquistados:</strong> 26 pódios</li>
+                        <li><strong>Velocidade Máx. Registrada:</strong> 349,8 km/h (Spa-Francorchamps)</li>
+                        <li><strong>Frequência Cardíaca Média:</strong> 168 bpm</li>
+                    </ul>
+                </article>
+            </div>
             <hr>
         </section>
 
@@ -122,7 +227,7 @@
         <!-- 4. Tabela de Especificações Técnicas Comparativas -->
         <section id="comparativo">
             <h4>Tabela Comparativa de Especificações Técnicas</h4>
-            <table border="1">
+            <table>
                 <thead>
                     <tr>
                         <th>Modelo</th>
@@ -165,8 +270,8 @@
                 Valor Total Estimado: <strong>R$ 5.698,90</strong>
             </p>
             <p>
-                <a href="#vitrine">Continuar Comprando</a> | 
-                <a href="#checkout">Ir para o Checkout</a>
+                <a href="#vitrine" class="btn-secundario">Continuar Comprando</a> | 
+                <a href="#checkout" class="btn-adicionar">Ir para o Checkout</a>
             </p>
             <hr>
         </section>
@@ -174,7 +279,7 @@
         <!-- 6. Formulário de Cadastro e Checkout (Método POST) -->
         <section id="checkout">
             <h2>Cadastro do Piloto e Checkout do Pedido</h2>
-            <p>Preencha os dados abaixo para confirmar seu pedido no Paddock Oficial.</p>
+            <p>Preencha os dados abaixo para confirmar seu pedido no Paddock Oficial com garantia e rastreamento prioritário.</p>
 
             <form action="processa-pedido.html" method="post">
 
@@ -183,36 +288,36 @@
                     <legend>Dados Pessoais e Acesso</legend>
 
                     <label for="nome">Nome completo:</label>
-                    <input type="text" name="nome" id="nome" required><br><br>
+                    <input type="text" name="nome" id="nome" required>
 
-                    <label for="email">E-mail:</label>
-                    <input type="email" name="email" id="email" required><br><br>
+                    <label for="email">E-mail corporativo ou pessoal:</label>
+                    <input type="email" name="email" id="email" required>
 
-                    <label for="senha">Senha:</label>
-                    <input type="password" name="senha" id="senha" required><br><br>
+                    <label for="senha">Senha de segurança:</label>
+                    <input type="password" name="senha" id="senha" required>
 
                     <label for="nascimento">Data de nascimento:</label>
-                    <input type="date" name="nascimento" id="nascimento"><br><br>
+                    <input type="date" name="nascimento" id="nascimento">
                 </fieldset>
-
-                <br>
 
                 <!-- Grupo 2: Seleção de Quantidade e Opções de Envio -->
                 <fieldset>
                     <legend>Seleção de Quantidade e Opções de Envio</legend>
 
                     <label for="quantidade">Quantidade do item:</label>
-                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" value="1"><br><br>
+                    <input type="number" name="quantidade" id="quantidade" min="1" max="10" value="1">
 
                     <p>Modalidade de Frete:</p>
-                    <input type="radio" name="frete" id="frete-padrao" value="padrao" checked>
-                    <label for="frete-padrao">Frete Padrão Grid (5 a 8 dias úteis — Grátis)</label><br>
+                    <label for="frete-padrao">
+                        <input type="radio" name="frete" id="frete-padrao" value="padrao" checked> 
+                        Frete Padrão Grid (5 a 8 dias úteis — Grátis)
+                    </label>
 
-                    <input type="radio" name="frete" id="frete-expressa" value="expressa">
-                    <label for="frete-expressa">Frete Expresso Pit Stop (1 a 2 dias úteis — R$ 45,00)</label><br><br>
+                    <label for="frete-expressa">
+                        <input type="radio" name="frete" id="frete-expressa" value="expressa"> 
+                        Frete Expresso Pit Stop (1 a 2 dias úteis — R$ 45,00)
+                    </label>
                 </fieldset>
-
-                <br>
 
                 <!-- Grupo 3: Seleção de Pagamento e Termos -->
                 <fieldset>
@@ -224,26 +329,26 @@
                         <option value="pix">Pix (com 10% de desconto imediato)</option>
                         <option value="cartao">Cartão de Crédito (em até 10x sem juros)</option>
                         <option value="boleto">Boleto Bancário Oficial</option>
-                    </select><br><br>
+                    </select>
 
-                    <input type="checkbox" name="termos" id="termos" required>
-                    <label for="termos">Aceito os termos de uso e condições da F1 Paddock Store</label><br>
+                    <label for="termos">
+                        <input type="checkbox" name="termos" id="termos" required> 
+                        Aceito os termos de uso e condições da F1 Paddock Store
+                    </label>
 
-                    <input type="checkbox" name="ofertas" id="ofertas">
-                    <label for="ofertas">Desejo receber ofertas exclusivas e avisos de GPs por e-mail</label><br><br>
+                    <label for="ofertas">
+                        <input type="checkbox" name="ofertas" id="ofertas"> 
+                        Desejo receber ofertas exclusivas e avisos de GPs por e-mail
+                    </label>
                 </fieldset>
-
-                <br>
 
                 <!-- Grupo 4: Caixa de Texto de Múltiplas Linhas -->
                 <fieldset>
                     <legend>Observações do Pedido</legend>
 
-                    <label for="observacoes">Observações de entrega:</label><br>
-                    <textarea name="observacoes" id="observacoes" rows="4" cols="40" placeholder="Ponto de referência, instruções de entrega..."></textarea><br><br>
+                    <label for="observacoes">Instruções de entrega e ponto de referência:</label>
+                    <textarea name="observacoes" id="observacoes" rows="4" cols="40" placeholder="Ponto de referência, instruções de entrega..."></textarea>
                 </fieldset>
-
-                <br>
 
                 <!-- Botões de Ação do Formulário POST -->
                 <button type="submit">Finalizar Pedido</button>
