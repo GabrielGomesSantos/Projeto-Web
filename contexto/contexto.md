@@ -14,7 +14,7 @@
 
 ## 2. Stack Tecnológica
 - **Front-end**:
-  - HTML5 Puro (sem frameworks / semântica rigorosa)
+  - HTML5 Puro (sem frameworks / semântica rigorosa a partir da v2.0)
   - CSS3 Puro (sem Tailwind, Bootstrap ou pré-processadores)
   - JavaScript Puro (Vanilla JS, sem bibliotecas externas)
 - **Back-end**:
@@ -33,7 +33,7 @@ Commit Projeto Web parte: X
 
 ---
 
-## 4. Estrutura de Diretórios Inicial
+## 4. Estrutura de Diretórios
 ```text
 projeto Web/
 ├── contexto/
@@ -42,7 +42,7 @@ projeto Web/
 ├── css/                  # Folhas de estilo (CSS puro)
 ├── js/                   # Scripts funcionais (Vanilla JS)
 ├── php/                  # Lógica de backend e templates modulares
-└── index.html (ou .php)  # Ponto de entrada
+└── index.html            # Ponto de entrada atual (HTML base v1.0)
 ```
 
 ---
@@ -51,20 +51,25 @@ projeto Web/
 | Parte | Descrição | Status | Commit |
 | :---: | :--- | :---: | :---: |
 | **0** | Inicialização do repositório, estrutura de pastas e arquivo de contexto | ✅ Concluído | `Commit Projeto Web parte: 0` |
-| **1** | Aguardando envio da proposta pelo usuário... | ⏳ Pendente | — |
+| **1** | **Versão 1.0**: Estrutura base em HTML puro com as 5 seções obrigatórias (`<div>`, `<h1>`-`<h6>`, `<p>`, `<img>`, `<a>`, `<b>`, `<i>`, `<span>`, `<strong>`, `<em>`, `<br>`, `<hr>`) | ✅ Concluído | `Commit Projeto Web parte: 1` |
+| **2** | **Versão 2.0**: HTML5 Semântico (`<header>`, `<main>`, `<article>`, `<section>`, `<aside>`, `<footer>`) e Tabelas/Listas de dados | ⏳ Próxima | `Commit Projeto Web parte: 2` |
 
 ---
 
-## 6. Sugestões e Ideias para Criação (Brainstorming F1)
-Aqui estão sugestões de recursos imersivos e temáticos que podemos incorporar conforme as etapas forem avançando:
+## 6. Sugestões e Ideias para Criação (Roadmap e F1 Experience)
+Aqui estão sugestões de recursos imersivos e temáticos para as próximas etapas:
 
-1. **Grid de Produtos por Escuderia**:
-   - Filtros visuais por equipes do grid atual (Ferrari, McLaren, Red Bull, Mercedes, Aston Martin, etc.).
-2. **Telemetry & Pit Stop Experience**:
-   - Área do carrinho estilizada como uma "Parada no Box" (Pit Stop), onde o checkout é o tempo de liberação da compra.
-3. **Seção de Pilotos & Réplicas de Colecionador**:
-   - Páginas/cards com especificações técnicas reais dos carros (motorização V6 Turbo Híbrido, pneus Pirelli, asa móvel DRS).
-4. **Calculadora de Frete com Pistas do Calendário**:
-   - Simulação de entrega "Express Paddock" com temática de Grande Prêmio (ex: entrega expressa no circuito de Interlagos).
-5. **Backend PHP para Gestão de Estoque e Pedidos**:
-   - Simulação de estoque por escuderia, validação de cupons (ex: `POLEPOSITION10`, `FASTESTLAP`) e persistência simples de pedidos.
+1. **Evolução Semântica (Parte 2 - HTML5 Semântico)**:
+   - Substituição de `<div>` de topo por `<header>` e do rodapé por `<footer>`.
+   - Organização da vitrine em `<main>` contendo `<section>` com `<article>` para cada produto.
+   - Utilização de `<table>` estilizada para comparação de telemetria/especificações técnicas dos volantes e miniaturas.
+   - Utilização de `<ul>` e `<ol>` para itens da caixa e passos do checkout/pit stop.
+2. **Estilização e Identidade Visual (Parte 3 - CSS Puro)**:
+   - Paleta de cores inspirada no asfalto, vermelho de alta rotação (`#e10600`), preto carbono e detalhes em amarelo pit-lane.
+   - Cards com efeito de elevação e bordas que lembram fibra de carbono.
+3. **Grid Responsivo (Parte 4 - Flexbox & Grid)**:
+   - Grade de produtos adaptável com cards idênticos a grandes portais de e-commerce.
+4. **Formulários e Checkout (Parte 5 - Forms)**:
+   - Formulário de credenciamento "Paddock Pass" (cadastro de cliente) e tela de pagamento com bandeira quadriculada.
+5. **Dinamismo e Interatividade (Parte 6 - JavaScript & PHP)**:
+   - Carrinho dinâmico ("Pit Stop"), cálculo instantâneo com frete por circuito e backend PHP para processar os pedidos.
