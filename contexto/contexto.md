@@ -14,9 +14,9 @@
 
 ## 2. Stack Tecnológica
 - **Front-end**:
-  - HTML5 Puro com semântica completa, formulários avançados (GET e POST)
-  - CSS3 Puro (será introduzido na Versão 4.0 em arquivo externo sem estilos inline)
-  - JavaScript Puro (Vanilla JS, sem bibliotecas externas)
+  - HTML5 Puro com semântica completa e formulários avançados (GET e POST)
+  - CSS3 Puro centralizado externamente em `css/estilo.css` (sem frameworks, sem inline styles e sem `<style>`)
+  - JavaScript Puro (Vanilla JS para próximas etapas de dinamismo)
 - **Back-end**:
   - PHP Puro (estruturado / modular para processamento de regras, checkout e dados)
 - **Controle de Versão**:
@@ -39,11 +39,12 @@ projeto Web/
 ├── contexto/
 │   └── contexto.md          # Arquivo de diretrizes, regras e sugestões
 ├── assets/                  # Imagens, ícones e mídias
-├── css/                     # Folhas de estilo (css/estilo.css na parte 4)
-├── js/                      # Scripts funcionais (Vanilla JS)
+├── css/
+│   └── estilo.css           # Folha de estilo externa com Reset, Box Model, Menu, Cards, Tabela Zebra e Forms
+├── js/                      # Scripts funcionais (Vanilla JS para próximas etapas)
 ├── php/                     # Lógica de backend e templates modulares
-├── index.html               # Ponto de entrada atualizado (HTML5 Semântico + Formulários GET/POST)
-└── processa-pedido.html     # Destino de feedback para o envio POST
+├── index.html               # Página principal completa com design CSS3 externo
+└── processa-pedido.html     # Página de confirmação pós-checkout POST com CSS3
 ```
 
 ---
@@ -55,24 +56,21 @@ projeto Web/
 | **1** | **Versão 1.0**: Estrutura base em HTML puro com as 5 seções obrigatórias (`<div>`, `<h1>`-`<h6>`, `<p>`, `<img>`, `<a>`, `<b>`, `<i>`, `<span>`, `<strong>`, `<em>`, `<br>`, `<hr>`) | ✅ Concluído | `Commit Projeto Web parte: 1` |
 | **2** | **Versão 2.0**: Refatoração semântica HTML5 (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<footer>`), listas (`<ul>`, `<ol>`), vídeo com `<video controls>` + múltiplos `<source>` e fallback, e tabela comparativa estruturada (`<table>`, `<thead>`, `<tbody>`, `<tr>`, `<th>`, `<td>`) | ✅ Concluído | `Commit Projeto Web parte: 2` |
 | **3** | **Versão 3.0**: Formulários de Coleta de Dados com métodos GET (busca e filtro no header) e POST (checkout estruturado com `<fieldset>`, `<legend>`, text, email, password, date, number, radio, select, checkbox, textarea e botões submit/reset) | ✅ Concluído | `Commit Projeto Web parte: 3` |
-| **4** | **Versão 4.0**: Estilização Externa e Design de Layout com CSS3 (`css/estilo.css`, reset global, tipografia, nav, cards, tabela zebra, formulários e botões com hover) | ⏳ Em execução | `Commit Projeto Web parte: 4` |
+| **4** | **Versão 4.0**: Estilização Externa e Design de Layout com CSS3 (`css/estilo.css`, reset global, box model, tipografia, menu de navegação com `:hover`, cards com sombras e cantos arredondados, multimídia fluida responsiva, tabela comparativa com zebra striping, formulários com estados `:focus` e botões com transição) | ✅ Concluído | `Commit Projeto Web parte: 4` |
+| **5** | **Versão 5.0**: Layout Responsivo com CSS Flexbox / Grid ou Interatividade Dinâmica em JavaScript | ⏳ Próxima | `Commit Projeto Web parte: 5` |
 
 ---
 
 ## 6. Sugestões e Ideias para Criação (Roadmap e F1 Experience)
-Aqui estão sugestões de recursos imersivos e temáticos:
+Aqui estão sugestões de recursos imersivos e temáticos para as próximas etapas:
 
-1. **Design System de Fórmula 1 (Parte 4 - CSS3 Puro)**:
-   - Esquema cromático:
-     - Vermelho F1: `#e10600`
-     - Fundo Paddock Dark: `#15151e`
-     - Asfalto Neutro: `#22242f`
-     - Texto e Contraste: `#f7f7f7` e `#d0d0d2`
-     - Destaque Ouro/Pódio: `#f5a623`
-   - Cards de produtos elevados com sombras de profundidade (`box-shadow: 0 4px 15px rgba(0,0,0,0.1)`).
-   - Tabela comparativa limpa, com linhas alternadas e destaque no cabeçalho.
-   - Formulário com campos destacados ao foco (`input:focus`) com contorno vermelho racing.
-2. **Layout Responsivo (Grid & Flexbox)**:
-   - Grade adaptável e fluida para vitrine e barra lateral.
-3. **Validações e Interatividade (Vanilla JS & PHP)**:
-   - Validação dinâmica dos campos de formulário e carrinho em tempo real.
+1. **Layout Grid & Flexbox Avançado (Parte 5)**:
+   - Disposição lado a lado do `<aside>` com a vitrine principal `<main>` usando CSS Grid de 2 colunas no desktop.
+   - Vitrine de produtos em grade responsiva com `grid-template-columns: repeat(auto-fit, minmax(280px, 1fr))`.
+   - Menu hambúrguer ou barra de telemetria expansível para telas móveis.
+2. **Dinamismo em JavaScript Puro (Parte 6)**:
+   - Adição e remoção dinâmica de itens no carrinho com atualização de contadores em tempo real.
+   - Cálculo automático do total com base no tipo de frete selecionado (Grid padrão grátis vs. Pit Stop Expresso R$ 45).
+   - Validação imediata de campos de senha e confirmação de e-mail.
+3. **Backend PHP (Parte 7)**:
+   - Conversão do checkout para processar os dados enviados via POST com PHP, salvando pedidos em banco SQLite ou arquivo JSON estruturado.
